@@ -1,0 +1,32 @@
+graph TB
+    subgraph Client["🖥️ Client Layer"]
+        A[Web Browser<br/>React.js + CSS3]
+    end
+
+    subgraph Backend["⚙️ Backend Layer"]
+        B[Express.js REST API<br/>Node.js]
+        C[Auth Middleware<br/>JWT]
+        D[User Module<br/>สมัครสมาชิก / Login]
+        E[Product Module<br/>CRUD สินค้า / หมวดหมู่]
+        F[Order Module<br/>คำสั่งซื้อ / สถานะ]
+        G[Payment Module<br/>บันทึกการชำระเงิน]
+        H[Review Module<br/>รีวิวสินค้า]
+    end
+
+    subgraph Data["🗄️ Data Layer"]
+        I[(PostgreSQL<br/>Primary Database)]
+    end
+
+    subgraph Deploy["🚀 Deployment"]
+        J[GitHub Pages<br/>Frontend Hosting]
+        K[GitHub<br/>Version Control]
+        L[SourceTree<br/>Git GUI]
+    end
+
+    A -->|HTTP REST API| B
+    B --> C
+    C --> D & E & F & G & H
+    D & E & F & G & H --> I
+    A -.->|deploy| J
+    L -.->|push| K
+    K -.->|Pages| J
