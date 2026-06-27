@@ -117,7 +117,7 @@ npm run dev
 
 ## 🌐 GitHub Pages
 
-เข้าถึงเว็บไซต์ได้ที่: `https://PattaraponTH.github.io/skincare-shop`
+เข้าถึงเว็บไซต์ได้ที่: `https://PattaraponTH.github.io/skincare-ecommerce`
 
 ---
 
